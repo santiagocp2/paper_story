@@ -6,7 +6,7 @@ import GlobalContext from '../context/GlobalContext';
 
 function BookDetail() {
     const { bookId } = useParams();
-    const { books } = useContext(GlobalContext);
+    const { books, updateCart } = useContext(GlobalContext);
     const book = books.find(r => r.id === Number(bookId));
 
     if (!book) {
@@ -14,9 +14,11 @@ function BookDetail() {
     }
     return (
         <div className="container mx-auto pt-8 dark:text-dark">
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 px-5 font-karla">
-                <div className="py-2">
-                    <img src={book.imageLink} alt="selected" className="h-80" />
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-2 px-5 font-karla">
+                <div className="space-y-2">
+                    <div className="justify-items-center">
+                        <img src={book.imageLink} alt="selected" className="h-90" />
+                    </div>
                 </div>
                 <div className="px-2">
                     <h2 className="text-2xl font-bold">{book?.title}</h2>
@@ -57,18 +59,10 @@ function BookDetail() {
                         <button
                             type="button"
                             className="flex space-x-1 items-center mr-2 mb-2 hover:bg-green-700 text-white py-2 px-4 rounded bg-yellow-500"
-                            // onClick={addCart}
+                            onClick={() => updateCart(book?.id, "add")}
                             title="AGREGAR AL CARRITO"
                         >
                             <AiOutlineShoppingCart />
-                        </button>
-                        <button
-                            type="button"
-                            className="flex space-x-1 items-center mr-2 mb-2 bg-red-500 text-white py-2 px-4 rounded hover:bg-green-700"
-                            // onClick={buyNow}
-                            title="COMPRAR AHORA"
-                        >
-                            <FaHandHoldingDollar />
                         </button>
                     </div>
                 </div>

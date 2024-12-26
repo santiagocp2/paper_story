@@ -2,7 +2,7 @@ import BookCard from "./BookCard";
 
 const BookList = ({
     title,
-    books,
+    books
 }) => {
     return (
         <div className="container mt-8 mx-auto px-4 white:bg-slate-800">
@@ -13,19 +13,15 @@ const BookList = ({
             </div>
             <div
                 className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4"
-                data-test="product-list-container"
             >
                 {books?.map((book, index) => (
                     <BookCard
                         key={index}
                         id={book.id}
                         author={book.author}
-                        language={book.language}
-                        link={book.link}
                         year={book.year}
                         title={book.title}
                         image={book.imageLink}
-                        pages={book.pages}
                         price={book.price}
                     />
                 ))}

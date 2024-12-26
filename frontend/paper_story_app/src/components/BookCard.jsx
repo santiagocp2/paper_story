@@ -1,18 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import GlobalContext from '../context/GlobalContext';
 
 const BookCard = ({
     id,
     author,
-    language,
-    link,
     year,
     title,
     image,
-    pages,
-    price,
+    price
 }) => {
+
+    const { updateCart } = useContext(GlobalContext);
+
     return (
         <div className="text-center border border-gray-200 font-lato">
             <div className="border-b border-gray-200">
@@ -44,8 +45,7 @@ const BookCard = ({
                 <button
                     type="button"
                     className="flex items-center space-x-2 hover:bg-green-500 text-dark py-2 px-3 rounded bg-yellow-500"
-                    // onClick={addCart}
-                    data-test="add-cart-btn"
+                    onClick={() => updateCart(id, "add")}
                     title="AGREGAR AL CARRITO"
                 >
                     <AiOutlineShoppingCart />

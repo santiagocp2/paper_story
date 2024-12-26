@@ -9,7 +9,6 @@ export const useBooks = () => {
      * en el primer renderizado.
      */
     useEffect(() => {
-
         //fetch('https://freetestapi.com/api/v1/books').then((res) => res.json()).then(console.log).then((res) =>  setBooks(res));
         setBooks(BookData);
         setTimeout(() => {

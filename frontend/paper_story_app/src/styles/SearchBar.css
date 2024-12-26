@@ -1,0 +1,23 @@
+.search_result {
+    background: white;
+    width: 400px;
+    margin-top: 10px;
+    position: absolute;
+    top: 70px;
+}
+
+.search_result::-webkit-scrollbar {
+    display: none;
+}
+
+.search_suggestion_line,
+.search_loading {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+}
+
+.search_suggestion_line:hover {
+    background: rgb(227, 227, 227);
+}

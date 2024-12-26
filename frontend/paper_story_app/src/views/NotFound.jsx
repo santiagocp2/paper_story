@@ -2,8 +2,8 @@ import React from 'react';
 
 function NotFound() {
     return (
-        <div>
-            <h1>404 - Página no encontrada</h1>
+        <div className="white:bg-slate-800">
+            <h1 className="text-center text-xl font-bold font-karla">404 - PAGINA NO ENCONTRADA</h1>
         </div>
     );
 }
