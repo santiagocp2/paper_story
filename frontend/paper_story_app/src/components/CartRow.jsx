@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import GlobalContext from '../context/GlobalContext';
+import '../styles/CartRow.css';
 
 const CartRow = ({
     id,
@@ -12,17 +13,17 @@ const CartRow = ({
     const { updateCart } = useContext(GlobalContext);
 
     return (
-        <div className="grid grid-cols-7 gap-3 border items-center">
-            <img src={image} alt="PORTADA" className="h-25 col-span-2" />
-            <div className="col-span-3">
-                <h3 className="font-bold leading-4">{title}</h3>
-                <div className="flex space-x-2 items-center">
-                    <h3 className="font-semibold">$ {price}</h3>
+        <div className="cart-row">
+            <img src={image} alt="PORTADA" className="cart-row__logo" />
+            <div className="cart-row__content">
+                <h3 className="cart-row__title">{title}</h3>
+                <div className="cart-row__price">
+                    <h3 className="cart-row__price__amount">$ {price}</h3>
                 </div>
             </div>
-            <div className="font-bold col-span-2">
+            <div className="cart-row__detele">
                 <RiDeleteBin6Line
-                    className="text-red-500 cursor-pointer text-2xl hover:text-red-600"
+                    className="cart-row__delete__logo"
                     onClick={() => updateCart(id, "remove")}
                 />
             </div>

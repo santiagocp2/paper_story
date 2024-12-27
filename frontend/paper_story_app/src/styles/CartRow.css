@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .cart-row{
+        @apply grid grid-cols-7 gap-3 border items-center;
+    }
+    .cart-row__logo{
+        @apply col-span-2;
+    }
+    .cart-row__content{
+        @apply col-span-3;
+    }
+    .cart-row__title{
+        @apply font-bold leading-4;
+    }
+    .cart-row__price{
+        @apply flex space-x-2 items-center;
+    }
+    .cart-row__price__amount{
+        @apply font-semibold;
+    }
+    .cart-row__detele{
+        @apply font-bold col-span-2;
+    }
+    .cart-row__delete__logo{
+        @apply text-red-500 cursor-pointer text-2xl hover:text-red-600 ;
+    }
+}

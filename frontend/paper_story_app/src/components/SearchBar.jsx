@@ -28,16 +28,16 @@ const SearchBar = () => {
         }
     }, [search]);
     return (
-        <div className="lg:flex hidden w-full max-w-[500px]">
+        <div className="search">
             <input
                 type="text"
                 placeholder="Buscar libro"
                 onChange={handleChange}
                 autoComplete="off"
                 value={search}
-                className="border-2 border-gray-500 px-6 py-2 w-full dark:text-dark white:bg-slate-800"
+                className="search__input"
             />
-            <div className="bg-gray-500 text-white text-[26px] grid place-items-center px-4">
+            <div className="search__icon">
                 {search === "" ? (
                     <BsSearch />
                 ) : (
@@ -45,11 +45,10 @@ const SearchBar = () => {
                 )
                 }
             </div>
-            {search ? <div className="search_result">
+            {search ? <div className="search__result">
                 {searchData.slice(0, 5).map((book, index) => (
-                    <Link to={`/book/${book.id}`}>
-                        <a className="search_suggestion_line" target="_blank" key={index}>{book.title}
-                        </a>
+                    <Link key={index} to={`/book/${book.id}`}>
+                        <a href='#' className="search__suggestion-line" target="_blank">{book.title}</a>
                     </Link>
                 ))}
             </div> : () => { }

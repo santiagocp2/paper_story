@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .not-found {
+        @apply text-center text-xl font-bold font-karla;
+    }
+}

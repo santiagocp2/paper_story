@@ -6,11 +6,9 @@ function Home() {
 
   return (
     <div>
-      <div className="white:bg-slate-800">
         <Information />
         <NewBooks />
         <br />
-      </div>
     </div>
   );
 }

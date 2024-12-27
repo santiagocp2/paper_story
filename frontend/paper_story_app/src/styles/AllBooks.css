@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .allbooks__item {
+        @apply grid gap-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1;
+    }
+    .allbooks__data__filter {
+        @apply border border-black dark:border-white rounded p-1 dark:text-white dark:bg-slate-600;
+    }
+    .allbooks__data__title {
+        @apply text-lg dark:text-white;
+    }
+    .allbooks__content__data {
+        @apply flex items-center justify-between;
+    }
+    .allbooks__content{
+        @apply col-span-4 space-y-4;
+    }
+    .allbooks__container {
+        @apply grid grid-cols-4 gap-1;
+    }
+    .allbooks {
+        @apply container mx-auto min-h-[83vh] p-4 font-karla;
+    }
+}

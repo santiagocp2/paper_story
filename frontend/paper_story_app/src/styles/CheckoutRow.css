@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .checkout-row {
+        @apply grid grid-cols-3 gap-3 border items-center;
+    }
+    .checkout-row__content {
+        @apply justify-items-center;
+    }
+    .checkout-row__title {
+        @apply font-bold leading-4;
+    }
+    .checkout-row__price {
+        @apply flex space-x-2 items-center;
+    }
+    .checkout-row__price__amount {
+        @apply font-semibold;
+    }
+    .checkout-row__delete-logo {
+        @apply text-red-500 cursor-pointer text-2xl hover:text-red-600;
+    }
+}

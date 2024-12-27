@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Lato&family=Lora:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .landing__logo {
+        @apply relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-cover bg-center;
+    }
+    .landing__statistics__text {
+        @apply leading-7 text-gray-400;
+    }
+    .landing__statistics__number {
+        @apply text-4xl font-bold;
+    }
+    .landing__statistics {
+        @apply flex justify-center items-center flex-wrap w-full mt-20 gap-16;
+    }
+    .landing__button__logo {
+        @apply ml-2 rounded-full w-5 h-5;
+    }
+    .landing__button {
+        @apply flex items-center space-x-2 hover:bg-green-500 py-2 px-3 rounded bg-gray-500;
+    }
+    .landing__content__p {
+        @apply text-lg leading-9 mt-7 mb-14 sm:max-w-sm;
+    }
+    .landing__content__span-2 {
+        @apply text-gray-400 text-5xl inline-block mt-3;
+    }
+    .landing__content__span-1 {
+        @apply xl:bg-white xl:whitespace-nowrap relative text-5xl z-10 xl:pr-10;
+    }
+    .landing__content__info {
+        @apply max-sm:text-[68px] max-sm:leading-[82px] font-bold;
+    }
+    .landing__content {
+        @apply relative xl:w-2/5 flex flex-col items-center w-full pt-36;
+    }
+    .landing {
+        @apply w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10;
+    }
+}

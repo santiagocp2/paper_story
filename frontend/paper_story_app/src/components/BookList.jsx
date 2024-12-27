@@ -1,18 +1,19 @@
 import BookCard from "./BookCard";
+import "../styles/BookList.css";
 
 const BookList = ({
     title,
     books
 }) => {
     return (
-        <div className="container mt-8 mx-auto px-4 white:bg-slate-800">
-            <div className="sm:flex items-center justify-between">
-                <h2 className="text-3xl font-medium font-lora dark:text-dark">
+        <div className="book-list">
+            <div className="book-list__title">
+                <h2 className="book-list__title-h2">
                     {title}
                 </h2>
             </div>
             <div
-                className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4"
+                className="book-list__item"
             >
                 {books?.map((book, index) => (
                     <BookCard

@@ -1,5 +1,6 @@
 import useRedirection from "../hooks/useRedirection";
 import { Link } from 'react-router-dom';
+import "../styles/Landing.css";
 
 const Landing = () => {
 
@@ -8,57 +9,57 @@ const Landing = () => {
     return (
         <section
             id="landing"
-            className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
+            className="landing"
         >
-            <div className="relative xl:w-2/5 flex flex-col items-center w-full max-xl:padding-x pt-36">
-                <h1 className="mt-10 font-palanquin text-5xl max-sm:text-[68px] max-sm:leading-[82px] font-bold">
-                    <span className="xl:bg-white xl:whitespace-nowrap relative z-10 xl:pr-10 max-sm::p-0">
+            <div className="landing__content">
+                <h1 className="landing__content__info">
+                    <span className="landing__content__span-1">
                         Bienvenido a{" "}
                     </span>
                     <br />
-                    <span className="text-gray-400 inline-block mt-3">
+                    <span className="landing__content__span-2">
                         Relatos de papel{" "}
                     </span>{" "}
                 </h1>
-                <p className="font-montserrat text-slate-gray text-lg leading-9 mt-7 mb-14 sm:max-w-sm">
+                <p className="landing__content__p">
                     La mejor tienda de libros en línea, con una amplia variedad de libros.
                 </p>
                 <Link to="/home">
                     <button
                         type="button"
-                        className="flex items-center space-x-2 hover:bg-green-500 text-dark py-2 px-3 rounded bg-gray-500">
+                        className="landing__button">
                         Comprar Ahora
                         <img
                             src="./arrow.svg"
                             alt="arrow right icon"
-                            className="ml-2 rounded-full w-5 h-5"
+                            className="landing__button__logo"
                         />
                     </button>
                 </Link>
 
-                <div className="flex justify-center items-center flex-wrap w-full mt-20 gap-16">
+                <div className="landing__statistics">
                     <div>
-                        <p className="text-4xl font-palanquin font-bold">+99</p>
-                        <p className="font-montserrat leading-7 text-gray-400">
+                        <p className="landing__statistics__number">+99</p>
+                        <p className="landing__statistics__text">
                             Libros
                         </p>
                     </div>
                     <div>
-                        <p className="text-4xl font-palanquin font-bold">+5</p>
-                        <p className="font-montserrat leading-7 text-gray-400">
+                        <p className="landing__statistics__number">+5</p>
+                        <p className="landing__statistics__text">
                             Autores
                         </p>
                     </div>
                     <div>
-                        <p className="text-4xl font-palanquin font-bold">+3</p>
-                        <p className="font-montserrat leading-7 text-gray-400">
+                        <p className="landing__statistics__number">+3</p>
+                        <p className="landing__statistics__text">
                             Lenguajes
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-Landing bg-cover bg-center">
+            <div className="landing__logo">
                 <img
                     src="./logo.png"
                     alt="shoe collection"

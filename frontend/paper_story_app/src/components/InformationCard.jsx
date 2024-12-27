@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/InformationCard.css';
 
 const InformationCard = ({
     icon,
@@ -6,11 +7,11 @@ const InformationCard = ({
     desc
 }) => {
     return (
-        <div className="flex gap-2 bg-gray-100 dark:bg-slate-600 px-4 py-6 font-karla">
+        <div className="information-card">
             {icon}
             <div>
-                <h2 className="font-medium text-xl dark:text-white">{title}</h2>
-                <p className="text-gray-600 dark:text-white">{desc}</p>
+                <h2 className="information-card__h2">{title}</h2>
+                <p className="information-card__p">{desc}</p>
             </div>
         </div>
 

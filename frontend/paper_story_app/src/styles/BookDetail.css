@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .book-detail {
+        @apply container mx-auto pt-8;
+    }
+    .book-detail__content {
+        @apply grid md:grid-cols-1 lg:grid-cols-2 gap-2 px-5 font-karla;
+    }
+    .book-detail__logo {
+        @apply justify-items-center space-y-2;
+    }
+    .book-detail__data {
+        @apply px-2;
+    }
+    .book-detail__title {
+        @apply text-2xl font-bold;
+    }
+    .book-detail__price {
+        @apply mt-1;
+    }
+    .book-detail__price-amount {
+        @apply font-medium text-red-500 text-xl;
+    }
+    .book-detail__table {
+        @apply mt-2;
+    }
+    .book-detail__td {
+        @apply pr-2 font-bold;
+    }
+    .book-detail__info {
+        @apply mt-2;
+    }
+    .book-detail__info-title {
+        @apply font-bold;
+    }
+    .book-detail__info-text {
+        @apply leading-5;
+    }
+    .book-detail__info-text__link {
+        @apply text-blue-500;
+    }
+    .book-detail__cart {
+        @apply flex flex-wrap items-center mt-4 mb-2;
+    }
+    .book-detail__cart-add {
+        @apply flex space-x-1 items-center mr-2 mb-2 hover:bg-green-700 text-white py-2 px-4 rounded bg-yellow-500;
+    }
+}

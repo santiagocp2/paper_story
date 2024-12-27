@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .checkout__button-pay{
+        @apply w-full text-center bg-blue-500 py-2 my-4 rounded font-bold text-xl hover:bg-blue-700;
+    }
+    .checkout__total__data{
+        @apply font-bold text-2xl;
+    }
+    .checkout__total{
+        @apply flex items-center justify-between p-2;
+    }
+    .checkout__cart__text{
+        @apply text-center text-xl my-2;
+    }
+    .checkout__cart{
+        @apply flex flex-col justify-center items-center p-4;
+    }
+    .checkout__item{
+        @apply mt-6 space-y-2;
+    }
+    .checkout__title_h3{
+        @apply font-semibold text-2xl;
+    }
+    .checkout__title{
+        @apply flex items-center justify-between;
+    }
+    .checkout__container{
+        @apply container mx-auto pt-8;
+    }
+    .checkout__button__action{
+        @apply w-1/2 border border-gray-500 rounded cursor-pointer text-center py-1;
+    }
+    .checkout__buttons{
+        @apply flex items-center space-x-2;
+    }
+    .checkout__alert__description{
+        @apply leading-4 mb-3;
+    }
+    .checkout__alert__title{
+        @apply font-bold text-xl mb-1;
+    }
+    .checkout{
+        @apply container mx-auto pt-8;
+    }
+}

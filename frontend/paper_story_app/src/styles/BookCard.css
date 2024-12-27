@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .book-card__button {
+        @apply flex items-center space-x-2 hover:bg-green-500 py-2 px-3 rounded bg-yellow-500;
+    }
+    .book-card__price {
+        @apply font-medium text-red-500 text-xl;
+    }
+    .book-card__cart {
+        @apply flex flex-wrap items-center justify-between px-4 pb-4;
+    }
+    .book-card__link-title {
+        @apply font-semibold hover:underline overflow-hidden text-ellipsis block;
+    }
+    .book-card__autor {
+        @apply text-gray-500 text-[14px] font-medium;
+    }
+    .book-card__publicacion {
+        @apply text-gray-500 text-[14px] font-medium;
+    }
+    .book-card__content {
+        @apply px-4 pt-4;
+    }
+    .book-card__logo {
+        @apply inline-block h-60 transition-transform duration-200 hover:scale-110;
+    }
+    .book-card__link {
+        @apply border-b border-gray-200;
+    }
+    .book-card {
+        @apply text-center border border-gray-200 font-lato;
+    }
+}

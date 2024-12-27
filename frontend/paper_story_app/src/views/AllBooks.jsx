@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState, useRef } from 'react';
 import BookCard from '../components/BookCard';
 import GlobalContext from '../context/GlobalContext';
+import '../styles/AllBooks.css';
 
 const AllBooks = () => {
     const { books } = useContext(GlobalContext);
@@ -22,14 +23,14 @@ const AllBooks = () => {
     };
 
     return (
-        <div className="container mx-auto min-h-[83vh] p-4 font-karla">
-            <div className="grid grid-cols-4 gap-1">
-                <div className="col-span-4 space-y-4">
-                    <div className="flex items-center justify-between">
-                        <span className="text-lg dark:text-white">Libros</span>
+        <div className="allbooks">
+            <div className="allbooks__container">
+                <div className="allbooks__content">
+                    <div className="allbooks__content__data">
+                        <span className="allbooks__data__title">Libros</span>
                         <select
                             ref={sortRef}
-                            className="border border-black dark:border-white rounded p-1 dark:text-white dark:bg-slate-600"
+                            className="allbooks__data__filter"
                             onChange={(e) => sortBooks(e.target.value)}
                         >
                             <option value="default">Por defecto</option>
@@ -37,7 +38,7 @@ const AllBooks = () => {
                             <option value="desc">Año de publicación (mas reciente)</option>
                         </select>
                     </div>
-                    <div className="grid gap-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+                    <div className="allbooks__item">
                         {currentBooks?.map((book, index) => (
                             <BookCard
                                 key={index}

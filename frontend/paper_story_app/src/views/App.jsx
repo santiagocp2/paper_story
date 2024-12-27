@@ -3,7 +3,6 @@ import GlobalContext from '../context/GlobalContext';
 import GlobalRouter from '../routes/GlobalRouter';
 import Footer from '../components/Footer';
 import { useBooks } from '../hooks/useBooks';
-import '../styles/App.css';
 
 function App() {
 

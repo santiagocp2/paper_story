@@ -3,44 +3,45 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import GlobalContext from '../context/GlobalContext';
 import SearchBar from './SearchBar';
+import '../styles/Header.css';
 
 const Header = () => {
     const { cart, setOpen } = useContext(GlobalContext);
     const cartCount = cart.length;
 
     return (
-        <header className="py-4 bg-white white:bg-slate-800 top-0 sticky z-10 shadow-lg font-karla">
-            <div className="container mx-auto px-4">
-                <div className="flex justify-between items-center">
+        <header className="header">
+            <div className="header__container">
+                <div className="header__content">
 
                     <Link
                         to="/home"
-                        className="text-3xl font-bold dark:text-dark justify-between items-center flex gap-2"
+                        className="header__content__home"
                     >
-                        <img className="inline-block h-12 hover:scale-110" alt="Logo de la tienda" src="./logo.png" />
+                        <img className="header__content__logo" alt="Logo de la tienda" src="./logo.png" />
                         <p>Relatos de Papel</p>
                     </Link>
                     <SearchBar />
-                    <div className="flex gap-4 md:gap-8 items-center dark:text-dark">
+                    <div className="header__content__menu">
                         <Link
                             to="/home"
-                            className="text-3xl font-bold"
+                            className="header__menu__option"
                         >
                             Inicio
                         </Link>
                         <Link
                             to="/books"
-                            className="text-3xl font-bold"
+                            className="header__menu__option"
                         >
                             Libros
                         </Link>
                         <div
-                            className="text-black-500 text-[32px] relative hover:cursor-pointer hover:opacity-80"
+                            className="header__menu__cart"
                             onClick={() => setOpen(true)}
                         >
-                            <AiOutlineShoppingCart className="dark:text-dark" />
+                            <AiOutlineShoppingCart />
                             <div
-                                className="absolute top-[-15px] right-[-10px] bg-red-600 w-[25px] h-[25px] rounded-full text-white text-[14px] grid place-items-center"
+                                className="header__cart__count"
                             >
                                 {cartCount}
                             </div>

@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styles/Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-500 text-white p-4 text-center mt-auto">
+        <footer className="footer">
             <p className="footer-text">© 2024 Relatos de Papel</p>
         </footer>
     );
